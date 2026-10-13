@@ -20,15 +20,4 @@
 | `git rebase --continue` | this command is used when you encounter a conflict and want to continue after resolving or fixing it |
 | `git rebase --abort` | this command is usedd when you want to go back before the rebase |
 | `git log --oneline --graph --all` | this command is used when you want to map all the branches and commits made |
-| `git branch -a` | this command is used when you want to list all the branches that also includes the remote ones in the github |
-| `git branch -d <branch name>` | this command is used when you want to delele a local branch |
-| `git rebase --skip` | this command is used when you want to drop your commit and keep the other branch version |
-| `git stash` | this command is used in order to save/hide uncommited changes |
-| `git stash list` | this command will list all the stashed |
-| `git stash pop` | this command is used to bring back the stashed files from the stash and deletes from the shelf because it was taken back |
-| `git stash apply` | this command is the same as `git stash pop` but the stash stays on the shelf even after getting it back |
-| `git restore <file>` | this command line is used when you want to undo changes to a file that are not committed yet, it puts the file back to how it was in the last commit (when you update your last commit) / this command line is used when you want to discard the changes you made to a file and restore it back to the last commit. it only works on changes that are not committed yet | 
-| `git reset --soft HEAD~1` | this command line is used when you want to remove the latest checkpoint (commit). the changes are kept and stay staged, so you can commit them again |
-| `git reset HEAD~1` | this command line is used when you want to remove the latest checkpoint (commit). the changes are kept but become unstaged |
-| `git reset --hard` | this command line is used when you want to throw away all changes that are not committed yet. the changes cannot be brought back |
-| `git revert` | this command line is used when 
+| `
