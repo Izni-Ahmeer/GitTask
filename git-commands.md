@@ -13,4 +13,28 @@
 | `git push` | sends the saved commits from this laptop to the github | this command line is used when, after commiting, when i want my changes online | PS F:\GitTask> git push info: please complete authentication in your browser... / Enumerating objects: 4, done. / Counting objects: 100% (4/4), done. / Delta compression using up to 4 threads / Compressing objects: 100% (2/2), done. / Writing objects: 100% (3/3), 298 bytes / 298.00 KiB/s, done. / Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0) / remote: Resolving deltas: 100% (1/1), completed with 1 local object. To https://github.com/Izni-Ahmeer/GitTask.git / 2ed280e..2ef1230  main -> main |
 | `git pull` | this command lets you to pull changes that are made in the GitHub (remote) repo | you can use this command when you want to pull changes made by other or by you into your laptop | Unpacking objects: 100% (3/3), 966 bytes / 46.00 KiB/s, done. / From https://github.com/Izni-Ahmeer/GitTask / 2ef1230..3aa1ba2  main       -> origin/main / Updating 2ef1230..3aa1ba2 / Fast-forward / README.md / 2 ++ / 1 file changed, 2 insertions(+) |
 | `git push -u origin develop` | sends the develop branch and commits to github and links them | this command is used the first time you push a new branch to github, so it gets created there and linked. after that, git push is enough | Enumerating objects: 4, done. Counting objects: 100% (4/4), done. Delta compression using up to 4 threads Compressing objects: 100% (3/3), done. Writing objects: 100% (3/3), 1.73 KiB / 885.00 KiB/s, done. Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0) remote: Resolving deltas: 100% (1/1), completed with 1 local object. remote:  remote: Create a pull request for 'develop' on GitHub by visiting: remote:      https://github.com/Izni-Ahmeer/GitTask/pull/new/develop remote:  To https://github.com/Izni-Ahmeer/GitTask.git |
-| `
+| `git switch -c` | this command is used to created and switch to the new branch that was created |
+| `git commit -m` | this command is used when you want to commit and then add a meaningful message |
+| `git merge develop` | this command is used when you want to combine with the develop branch and the one you're currently on |
+| `git rebase develop` | this command is used when you want to put your branches commits ontop of develop branch |
+| `git rebase --continue` | this command is used when you encounter a conflict and want to continue after resolving or fixing it |
+| `git rebase --abort` | this command is usedd when you want to go back before the rebase |
+| `git log --oneline --graph --all` | this command is used when you want to map all the branches and commits made |
+| `git branch -a` | this command is used when you want to list all the branches that also includes the remote ones in the github |
+| `git branch -d <branch name>` | this command is used when you want to delele a local branch |
+| `git rebase --skip` | this command is used when you want to drop your commit and keep the other branch version |
+| `git stash` | this command is used in order to save/hide uncommited changes |
+| `git stash list` | this command will list all the stashed |
+| `git stash pop` | this command is used to bring back the stashed files from the stash and deletes from the shelf because it was taken back |
+| `git stash apply` | this command is the same as `git stash pop` but the stash stays on the shelf even after getting it back |
+| `git restore <file>` | this command line is used when you want to undo changes to a file that are not committed yet, it puts the file back to how it was in the last commit (when you update your last commit) / this command line is used when you want to discard the changes you made to a file and restore it back to the last commit. it only works on changes that are not committed yet | 
+| `git reset --soft HEAD~1` | this command line is used when you want to remove the latest checkpoint (commit). the changes are kept and stay staged, so you can commit them again |
+| `git reset HEAD~1` | this command line is used when you want to remove the latest checkpoint (commit). the changes are kept but become unstaged |
+| `git reset --hard` | this command line is used when you want to throw away all changes that are not committed yet. the changes cannot be brought back |
+| `git revert` | this command line is used when a file with "bad changes" was committed with some lines, then reverted, which removes those lines in a new commit. when you revert it again, the lines return back. each revert does the opposite of the commit you pick, and all the commits stay in history |
+| `git diff` | this command line is used when you want to see the different between files, it shows the lines you changed in a file, with + for added lines and - for removed lines, compared to the last saved version. |
+| `git show` | this command line is used to when you want to show what one commit changed |
+| `git blame` | this command line is used when you want to figure out who was responsible for the last changed line of a file |
+| `git remote -v` | this command is used when you want to find out which github repo your connected to |
+|` git fetch` | this command is used when you want to download the new commits from GitHub without changing your files. it only updates git's record of GitHub (like `origin/develop`). to actually get the changes into your files, use `git merge origin/develop |
+| `git cherry-pick` | this command is used when you want to copy a specific commmit from another branch onto yours, without needing to bring everything in that branch into this |
