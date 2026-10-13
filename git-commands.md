@@ -31,4 +31,10 @@
 | `git reset --soft HEAD~1` | this command line is used when you want to remove the latest checkpoint (commit). the changes are kept and stay staged, so you can commit them again |
 | `git reset HEAD~1` | this command line is used when you want to remove the latest checkpoint (commit). the changes are kept but become unstaged |
 | `git reset --hard` | this command line is used when you want to throw away all changes that are not committed yet. the changes cannot be brought back |
-| `git revert` | this command line is used when 
+| `git revert` | this command line is used when a file with "bad changes" was committed with some lines, then reverted, which removes those lines in a new commit. when you revert it again, the lines return back. each revert does the opposite of the commit you pick, and all the commits stay in history |
+| `git diff` | this command line is used when you want to see the different between files, it shows the lines you changed in a file, with + for added lines and - for removed lines, compared to the last saved version. |
+| `git show` | this command line is used to when you want to show what one commit changed |
+| `git blame` | this command line is used when you want to figure out who was responsible for the last changed line of a file |
+| `git remote -v` | this command is used when you want to find out which github repo your connected to |
+|` git fetch` | this command is used when you want to download the new commits from GitHub without changing your files. it only updates git's record of GitHub (like `origin/develop`). to actually get the changes into your files, use `git merge origin/develop |
+| `git cherry-pick` | this command is used when you want to copy a specific commmit from another branch onto yours, without needing to bring everything in that branch into this |
