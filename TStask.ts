@@ -6,6 +6,7 @@ interface Employee {
   email: string;
   salary: number;
   isActiveStatus: EmployeeStatus;
+  department?: string;
 }
 
 const employeeDetails: Employee[] = [
@@ -22,8 +23,8 @@ const employeeDetails: Employee[] = [
     email: "JaneDoe@gmail.com",
     salary: 60000,
     isActiveStatus: "inactive",
-    },
-    {
+  },
+  {
     employeeId: "200626TS",
     fullName: "Sarah Perera",
     email: "sarah.perera@example.com",
@@ -52,13 +53,7 @@ function getEmployeeById(
 ): Employee | undefined {
   return list.find((employee) => employee.employeeId === employeeId);
 }
-const employee = getEmployeeById(employeeDetails, "200624TS");
 
-if (employee) {
-  console.log(`Employee found: ${employee.fullName}`);
-} else {
-  console.log("Employee not found.");
-}
 function getActiveEmployees(list: Employee[]): Employee[] {
   return list.filter((employee) => employee.isActiveStatus === "active");
 }
@@ -88,4 +83,22 @@ if (foundEmployee) {
   console.log(formatEmployeeDetails(foundEmployee));
 } else {
   console.log("Employee not found.");
+}
+function employeeNames(list: Employee[]): string[] {
+  return list.map((employee) => employee.fullName);
+}
+function monthSalaryExpenditure(list: Employee[]): number {
+  return list.reduce((total, employee) => total + employee.salary, 0);
+}
+function sortEmployeesBySalary(list: Employee[]): Employee[] {
+  return [...list].sort((a, b) => a.salary - b.salary);
+}
+function acceptEmployeeID(list: Employee[], employeeId: string | number): Employee | undefined {
+  let normalizedId: string;
+  if (typeof employeeId === "string") {
+    normalizedId = employeeId.trim();
+  } else {
+    normalizedId = employeeId.toString();
+  }
+  return getEmployeeById(list, normalizedId);
 }
