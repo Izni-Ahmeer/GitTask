@@ -1,0 +1,28 @@
+{
+  "name": "gittask",
+  "version": "1.0.0",
+  "description": "BLAH BLAH BLAHH",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Izni-Ahmeer@github.com/Izni-Ahmeer/GitTask.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Izni-Ahmeer/GitTask/issues"
+  },
+  "homepage": "https://github.com/Izni-Ahmeer/GitTask#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.13.0",
+    "globals": "^17.13.0",
+    "typescript": "<6.1.0",
+    "typescript-eslint": "^8.72.0"
+  }
+}
