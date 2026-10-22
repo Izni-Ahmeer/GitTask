@@ -4,7 +4,9 @@
   "description": "BLAH BLAH BLAHH",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --test \"src/**/*.test.ts\"",
+    "typecheck": "tsc",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,7 @@
   "homepage": "https://github.com/Izni-Ahmeer/GitTask#readme",
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@types/node": "^24.19.2",
     "eslint": "^10.13.0",
     "globals": "^17.13.0",
     "typescript": "<6.1.0",
