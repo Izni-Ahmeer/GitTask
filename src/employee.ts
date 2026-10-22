@@ -97,7 +97,6 @@ export function calculateTotalMonthlySalary(list: Employee[]): number {
 }
 
 export function sortEmployeesBySalary(list: Employee[]): Employee[] {
-  // Copy first because sort() mutates the array it is called on.
   return [...list].sort((a, b) => a.salary - b.salary);
 }
 
@@ -120,7 +119,10 @@ export function findEmployeeByAnyId(
   return getEmployeeById(list, normalizedId);
 }
 
-export function fetchEmployeeEmailByID(list: Employee[], employeeId: string): string {
+export function fetchEmployeeEmailByID(
+  list: Employee[],
+  employeeId: string,
+): string {
   if (employeeId === "") {
     throw new Error("Employee ID cannot be empty.");
   }
