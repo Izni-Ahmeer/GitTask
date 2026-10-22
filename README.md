@@ -117,10 +117,6 @@ this function accepts the employee ID as either a string or a number. it uses `t
 
 this function first checks that the employee ID isn't empty, then it uses `getEmployeeById` to find the employee and gives back their email. if the employee doesn't have a email, `??` is used to give back a backup message instead. if the ID is empty or the employee doesn't exist, it will throw a error.
 
-## Examples of Expected Behavior
-### Valid Inputs
-### Invalid Inputs
-
 ## Validation and Error Handling
 
 ### Input Validation
