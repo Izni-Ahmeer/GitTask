@@ -1,0 +1,44 @@
+
+ RUN  v5.0.5 F:/GitTask
+      Coverage enabled with v8
+
+ ✓ src/employee.test.ts > employee can be found using a valid ID 4ms
+ ✓ src/employee.test.ts > unknown employee ID returns undefined 0ms
+ ✓ src/employee.test.ts > active employees are filtered correctly 2ms
+ ✓ src/employee.test.ts > annual salary is calculated correctly 1ms
+ ✓ src/employee.test.ts > salary update accepts a valid value 0ms
+ ✓ src/employee.test.ts > salary update throws when the employee does not exist 3ms
+ ✓ src/employee.test.ts > negative salary is rejected 0ms
+ ✓ src/employee.test.ts > NaN and infinite salary values are rejected 1ms
+ ✓ src/employee.test.ts > empty employee arrays are handled correctly 1ms
+ ✓ src/employee.test.ts > missing email address is handled correctly 0ms
+ ✓ src/employee.test.ts > email is returned when the employee has one 0ms
+ ✓ src/employee.test.ts > string employee IDs are handled correctly 1ms
+ ✓ src/employee.test.ts > numeric employee IDs are handled correctly 1ms
+ ✓ src/employee.test.ts > sorting does not change the original array 2ms
+ ✓ src/employee.test.ts > invalid status values are blocked by the type system 0ms
+ ✓ src/employee.test.ts > formatEmployeeDetails returns as a readable string 0ms
+ ✓ src/employee.test.ts > formatEmployeeDetails handles missing email correctly 0ms
+ ✓ src/employee.test.ts > salary update rejects a salary of 0 0ms
+ ✓ src/employee.test.ts > Employee salary must be greater than 0 1ms
+ ✓ src/employee.test.ts > updating the current salary with new values 0ms
+ ✓ src/employee.test.ts > employees with equal salaries keep their original order 0ms
+ ✓ src/employee.test.ts > returns the first employee when two employees share the same ID 0ms
+ ✓ src/employee.test.ts > throws an error when fetching an email with an empty ID 0ms
+ ✓ src/employee.test.ts > total monthly salary adds up every employee's salary 0ms
+
+ Test Files  1 passed (1)
+      Tests  24 passed (24)
+   Start at  01:51:26
+   Duration  476ms (worker 41%, import 27%, tests 20%, transform 12%)
+
+ % Coverage report from v8
+No files with missing coverage.
+1 file fully covered.
+
+=============================== Coverage summary ===============================
+Statements   : 100% ( 34/34 )
+Branches     : 100% ( 22/22 )
+Functions    : 100% ( 15/15 )
+Lines        : 100% ( 29/29 )
+================================================================================
