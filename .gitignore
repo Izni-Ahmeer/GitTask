@@ -148,5 +148,4 @@ vite.config.ts.timestamp-*
 # Turbo Repo
 .turbo
 
-# local test file, not part of the submission
-src/employee.test.ts
+
