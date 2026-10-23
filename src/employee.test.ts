@@ -183,5 +183,18 @@ test("returns the first employee when two employees share the same ID", () => {
   expect(employee?.fullName).toBe("First");
 });
 
+test("throws an error when fetching an email with an empty ID", () => {
+  const list = getTestList();
+  expect(() => fetchEmployeeEmailByID(list, "")).toThrow("Employee ID cannot be empty.");
+  expect(() => fetchEmployeeEmailByID(list, "9999999TS")).toThrow("Employee ID not found. Try again with a valid ID.");
+
+});
+
+test("total monthly salary adds up every employee's salary", () => {
+  const total = calculateTotalMonthlySalary(getTestList());
+  expect(total).toBe(367000);
+  });
+
+
 
   
