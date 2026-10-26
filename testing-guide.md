@@ -93,4 +93,93 @@ these check that wrong or invalid input gets rejected instead of breaking the co
 
 ## Coverage Results
 
+PS F:\GitTask> npm run coverage
+
+> gittask@1.0.0 coverage
+> vitest run --coverage
+
+ RUN  v5.0.5 F:/GitTask
+      Coverage enabled with v8
+
+ ✓ src/employee.test.ts (23 tests) 13ms
+
+   ✓ employee can be found using a valid ID 3ms
+
+   ✓ unknown employee ID returns undefined 0ms
+
+   ✓ active employees are filtered correctly 1ms
+
+   ✓ annual salary is calculated correctly 0ms
+
+   ✓ salary update throws when the employee does not exist 1ms
+
+   ✓ negative salary is rejected 0ms
+
+   ✓ NaN and infinite salary values are rejected 0ms
+
+   ✓ empty employee arrays are handled correctly 1ms
+
+   ✓ missing email address is handled correctly 0ms
+
+   ✓ email is returned when the employee has one 0ms
+
+   ✓ string employee IDs are handled correctly 0ms
+
+   ✓ numeric employee IDs are handled correctly 0ms
+
+   ✓ sorting does not change the original array 1ms
+
+   ✓ invalid status values are blocked by the type system 0ms
+
+   ✓ formatEmployeeDetails returns as a readable string 0ms
+
+   ✓ formatEmployeeDetails handles missing email correctly 0ms
+
+   ✓ salary update rejects a salary of 0 0ms
+
+   ✓ Employee salary must be greater than 0 0ms
+
+   ✓ updating the current salary with new values 0ms
+
+   ✓ employees with equal salaries keep their original order 0ms
+
+   ✓ returns the first employee when two employees share the same ID 0ms
+
+   ✓ throws an error when fetching an email with an empty ID 0ms
+
+   ✓ total monthly salary adds up every employee's salary 0ms
+
+
+ Test Files  1 passed (1)
+
+      Tests  23 passed (23)
+
+   Start at  20:34:05
+
+   Duration  283ms (worker 37%, import 26%, tests 19%, transform 17%)
+
+
+ % Coverage report from v8
+
+No files with missing coverage.
+
+1 file fully covered.
+
+-------------|---------|----------|---------|---------|-------------------
+File         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------|---------|----------|---------|---------|-------------------
+All files    |     100 |      100 |     100 |     100 |                   
+ employee.ts |     100 |      100 |     100 |     100 |                   
+-------------|---------|----------|---------|---------|-------------------
+
 ## Known Limitations and Skipped Tests
+
+No tests were skipped from test cases.
+
+**Limitations**
+
+The duplicate ID aren't checked, none of the test cases ensures that all the ID's are unique to a single user.
+
+Decimal values of salary are allowed, when an employee has 0.5, the test cases just pass it because it has a higher value than 0.
+
+there were no integration testing, only unit tests.
